@@ -12,8 +12,8 @@
     },
     {
       "tag": "fees",
-      "patterns": ["What is the fee?", "Tell me about fees", "Fee details please", "How much is the semester fee?"],
-      "responses": ["The semester fee is 20,000. Scholarships are available based on merit."]
+      "patterns": ["What is the fee?", "Tell me about fees", "Fee details please", "How much is the semester fee?", "How do I pay fees?"],
+      "responses": ["The semester fee is Rs.60,000. Scholarships are available based on merit. You can pay online via the portal."]
     },
     {
       "tag": "timetable",
@@ -36,14 +36,124 @@
       "responses": ["The library is open from 9 AM to 7 PM, Monday to Saturday."]
     },
     {
+      "tag": "books",
+      "patterns": ["how many books", "books needed", "library books", "books in library"],
+      "responses": ["You need 7 books for this semester. All are available in the library!"]
+    },
+    {
       "tag": "goodbye",
       "patterns": ["Bye", "Goodbye", "See you later"],
       "responses": ["Goodbye! Have a nice day 😊", "See you soon!"]
     },
     {
-      "tag": "books",
-      "patterns": ["how many books", "books needed", "library books", "books in library"],
-      "responses": ["you need 7 books for this semester..", "all are available in library!"]
+      "tag": "scholarship",
+      "patterns": ["Scholarship details", "Can I get a scholarship?", "Scholarship process"],
+      "responses": ["Scholarships are awarded based on merit and need. Forms are available on the portal in August."]
+    },
+    {
+      "tag": "placements",
+      "patterns": ["Placement details", "Campus placement", "Which companies visit?", "Placement cell info"],
+      "responses": ["Top companies like TCS, Infosys, Wipro, and Amazon visit our campus. The placement cell guides students with training."]
+    },
+    {
+      "tag": "transport",
+      "patterns": ["Bus service", "College transport", "Transport fees", "Routes"],
+      "responses": ["Yes, the college provides bus facilities across the city. Transport fee is Rs.10,000 per semester."]
+    },
+    {
+      "tag": "canteen",
+      "patterns": ["Canteen food", "Is there a canteen?", "What food is available?", "Cafeteria"],
+      "responses": ["Yes, the canteen offers hygienic meals, snacks, and beverages at student-friendly prices."]
+    },
+    {
+      "tag": "wifi",
+      "patterns": ["Is WiFi available?", "Internet access", "Campus WiFi"],
+      "responses": ["Yes, high-speed WiFi is available throughout the campus for registered students."]
+    },
+    {
+      "tag": "faculty",
+      "patterns": ["Teachers list", "Faculty info", "Who are the professors?", "Faculty contacts"],
+      "responses": ["Faculty details with qualifications and contact emails are listed on the college website under the 'Academics' section."]
+    },
+    {
+      "tag": "results",
+      "patterns": ["When will results come?", "Results date", "Where can I check my results?"],
+      "responses": ["Results are announced 3 weeks after exams. You can check them on the student portal."]
+    },
+    {
+      "tag": "events",
+      "patterns": ["College events", "Cultural fest", "Tech fest", "Upcoming events"],
+      "responses": ["Our annual cultural fest is in February and the tech fest is in October. Updates are posted on the notice board and website."]
+    },
+    {
+      "tag": "attendance",
+      "patterns": ["Attendance percentage", "Minimum attendance", "Attendance rules"],
+      "responses": ["Students must maintain at least 75% attendance to be eligible for exams."]
+    },
+    {
+      "tag": "sports",
+      "patterns": ["Sports facilities", "Playground", "Sports events"],
+      "responses": ["The college has cricket, football, basketball, and indoor sports facilities. Annual sports meet happens in January."]
+    },
+    {
+      "tag": "medical",
+      "patterns": ["Medical help", "Health center", "First aid", "Doctor in college"],
+      "responses": ["The college has a medical room with a doctor and nurse available during class hours."]
+    },
+    {
+      "tag": "idcard",
+      "patterns": ["ID card issue", "Lost ID card", "New ID card"],
+      "responses": ["For a new or duplicate ID card, contact the admin office with an application and proof of identity."]
+    },
+    {
+      "tag": "complaint",
+      "patterns": ["How to file a complaint?", "Student grievance", "Complaint process"],
+      "responses": ["You can file complaints through the online grievance portal or by visiting the student affairs office."]
+    },
+    {
+      "tag": "certificate",
+      "patterns": ["How to get a bonafide certificate?", "Certificate request", "Character certificate"],
+      "responses": ["Certificates can be applied for at the admin office. Processing time is 3-5 working days."]
+    },
+    {
+      "tag": "holiday",
+      "patterns": ["Holiday list", "When is the next holiday?", "College closed dates"],
+      "responses": ["The academic calendar with holidays is available on the college website and notice board."]
+    },
+    {
+      "tag": "lab",
+      "patterns": ["Computer lab", "Lab timings", "Lab facilities"],
+      "responses": ["Labs are open from 9 AM to 6 PM. Students must carry their ID card for entry."]
+    },
+    {
+      "tag": "internship",
+      "patterns": ["Internship help", "Internship opportunities", "How to apply for internship?"],
+      "responses": ["The training & placement cell shares internship opportunities via email and notice board regularly."]
+    },
+    {
+      "tag": "clubs",
+      "patterns": ["Student clubs", "Cultural clubs", "Technical clubs"],
+      "responses": ["We have various clubs including dance, music, coding, robotics, and debate. You can register during the induction program."]
+    },
+    {
+      "tag": "hostel_rules",
+      "patterns": ["Hostel rules", "What are hostel timings?", "Hostel curfew"],
+      "responses": ["Hostel entry is allowed till 9 PM. Visitors are restricted. Ragging and smoking are strictly prohibited."]
+    },
+    {
+      "tag": "lost_found",
+      "patterns": ["Lost something", "Lost and found", "Where to report lost items?"],
+      "responses": ["Lost items can be reported at the security office. A lost and found register is maintained there."]
+    },
+    {
+      "tag": "faq",
+      "patterns": ["FAQ", "Help", "Common questions"],
+      "responses": ["You can visit the FAQ section on the website for commonly asked questions."]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [],
+      "responses": ["Sorry, I didn’t understand that. Could you please rephrase?"]
     }
   ]
 }
