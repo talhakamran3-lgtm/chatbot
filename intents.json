@@ -1,0 +1,49 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good evening"],
+      "responses": ["Hello! How can I help you today?", "Hi there! What can I do for you?"]
+    },
+    {
+      "tag": "admission",
+      "patterns": ["Tell me about admission", "How can I apply?", "Admission process", "When does admission start?"],
+      "responses": ["The admission process starts in July and ends in August. You can apply online through the college portal."]
+    },
+    {
+      "tag": "fees",
+      "patterns": ["What is the fee?", "Tell me about fees", "Fee details please", "How much is the semester fee?"],
+      "responses": ["The semester fee is 20,000. Scholarships are available based on merit."]
+    },
+    {
+      "tag": "timetable",
+      "patterns": ["Show me the timetable", "Class timings", "What is today's schedule?", "Lecture timings"],
+      "responses": ["The class timetable is available on the student portal. Please log in to view your batch schedule."]
+    },
+    {
+      "tag": "exam",
+      "patterns": ["When are the exams?", "Exam schedule", "Tell me about exams", "Exam timetable"],
+      "responses": ["Mid-semester exams are held in September and final exams in December. The detailed schedule is uploaded on the notice board and student portal."]
+    },
+    {
+      "tag": "hostel",
+      "patterns": ["Is hostel available?", "Tell me about hostel", "Hostel fees", "Accommodation"],
+      "responses": ["Yes, hostel facilities are available for both boys and girls. The hostel fee is ₹30,000 per semester including food."]
+    },
+    {
+      "tag": "library",
+      "patterns": ["Library timings", "When is the library open?", "Library information"],
+      "responses": ["The library is open from 9 AM to 7 PM, Monday to Saturday."]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "Goodbye", "See you later"],
+      "responses": ["Goodbye! Have a nice day 😊", "See you soon!"]
+    },
+    {
+      "tag": "books",
+      "patterns": ["how many books", "books needed", "library books", "books in library"],
+      "responses": ["you need 7 books for this semester", "all are available in library!"]
+    }
+  ]
+}
