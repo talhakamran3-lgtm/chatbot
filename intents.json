@@ -43,7 +43,7 @@
     {
       "tag": "books",
       "patterns": ["how many books", "books needed", "library books", "books in library"],
-      "responses": ["you need 7 books for this semester", "all are available in library!"]
+      "responses": ["you need 7 books for this semester..", "all are available in library!"]
     }
   ]
 }
