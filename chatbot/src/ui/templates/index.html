@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <style>
+        #chat-history { border:1px solid #ccc; padding:10px; height:300px; overflow-y:auto; margin-bottom:10px;}
+        .user { color:blue; }
+        .bot { color:green; }
+    </style>
+</head>
+<body>
+    <h2>Welcome, {{ user }}!</h2>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <h3>Chat</h3>
+    <div id="chat-history"></div>
+    <form id="chat-form" autocomplete="off">
+        <input type="text" id="user_input" name="user_input" required autofocus placeholder="Type your message...">
+        <input type="submit" value="Send">
+    </form>
+    <script>
+        const chatHistory = document.getElementById('chat-history');
+        document.getElementById('chat-form').onsubmit = async function(e) {
+            e.preventDefault();
+            const userInputElem = document.getElementById('user_input');
+            const user_input = userInputElem.value.trim();
+            if (!user_input) return;
+            chatHistory.innerHTML += `<div class="user"><b>You:</b> ${user_input}</div>`;
+            userInputElem.value = '';
+            userInputElem.focus();
+            try {
+                const response = await fetch('/get_response', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                    body: 'user_input=' + encodeURIComponent(user_input)
+                });
+                const data = await response.json();
+                chatHistory.innerHTML += `<div class="bot"><b>Bot:</b> ${data.response}</div>`;
+                chatHistory.scrollTop = chatHistory.scrollHeight;
+            } catch (err) {
+                chatHistory.innerHTML += `<div class="bot" style="color:red;"><b>Bot:</b> Error getting response.</div>`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -7,7 +7,8 @@ from nltk.stem import WordNetLemmatizer
 from keras.models import Sequential
 from keras.layers import Dense, Dropout
 from keras.optimizers import SGD
-import os
+
+nltk.download('punkt')
 
 lemmatizer = WordNetLemmatizer()
 

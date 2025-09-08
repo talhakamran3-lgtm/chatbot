@@ -1,0 +1,70 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Is anyone there?",
+        "Good day",
+        "Hey",
+        "How are you?"
+      ],
+      "responses": [
+        "Hello! How can I assist you today?",
+        "Hi there! What can I do for you?",
+        "Greetings! How may I help you?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "I am leaving",
+        "Take care"
+      ],
+      "responses": [
+        "Goodbye! Have a great day!",
+        "See you later! Take care!",
+        "Bye! Hope to see you again!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Thanks for your help"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Glad I could help!",
+        "Anytime! Let me know if you need anything else."
+      ]
+    },
+    {
+      "tag": "noanswer",
+      "patterns": [],
+      "responses": [
+        "I'm sorry, I don't understand.",
+        "Can you please rephrase that?",
+        "I'm not sure how to respond to that."
+      ]
+    },
+    {
+      "tag": "options",
+      "patterns": [
+        "What can you do?",
+        "Help",
+        "What are your capabilities?"
+      ],
+      "responses": [
+        "I can assist you with various queries. Just ask!",
+        "You can ask me about greetings, farewells, or general questions."
+      ]
+    }
+  ]
+}
