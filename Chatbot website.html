@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Helpdesk Chatbot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="relative w-full max-w-2xl bg-white rounded-2xl shadow-xl flex flex-col h-[80vh] md:h-[90vh]">
+        <!-- Header -->
+        <div class="p-4 bg-gray-900 text-white rounded-t-2xl flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center bg-white text-gray-900">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold">Helpdesk Chatbot</h1>
+                    <p class="text-sm font-light text-gray-400">Online and ready to help</p>
+                </div>
+            </div>
+            <button onclick="clearChat()" class="text-gray-400 hover:text-white transition duration-200 p-2 rounded-full">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Chat Area -->
+        <div id="chat-box" class="flex-grow p-6 overflow-y-auto scrollbar-hide space-y-4">
+            <!-- Bot message example -->
+            <div class="flex items-start space-x-3">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-200 text-gray-700 font-bold">
+                    B
+                </div>
+                <div class="max-w-xs md:max-w-md p-4 bg-gray-200 rounded-2xl rounded-tl-none text-gray-800 shadow-md">
+                    Hello! I'm a college helpdesk chatbot. How can I help you today?
+                </div>
+            </div>
+            <!-- Dynamic messages will be added here -->
+        </div>
+
+        <!-- Input Area -->
+        <div class="p-4 border-t border-gray-200 flex items-center space-x-3 rounded-b-2xl">
+            <input id="user-input" type="text" placeholder="Type your message..." class="flex-grow p-3 bg-gray-100 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+            <button id="send-btn" class="p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition duration-200">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 12h14"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chatBox = document.getElementById('chat-box');
+            const userInput = document.getElementById('user-input');
+            const sendBtn = document.getElementById('send-btn');
+            const intentsData = {
+              "intents": [
+                {
+                  "tag": "greeting",
+                  "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good evening"],
+                  "responses": ["Hello! How can I help you today?", "Hi there! What can I do for you?"]
+                },
+                {
+                  "tag": "admission",
+                  "patterns": ["Tell me about admission", "How can I apply?", "Admission process", "When does admission start?"],
+                  "responses": ["The admission process starts in July and ends in August. You can apply online through the college portal."]
+                },
+                {
+                  "tag": "fees",
+                  "patterns": ["What is the fee?", "Tell me about fees", "Fee details please", "How much is the semester fee?"],
+                  "responses": ["The semester fee is ₹20,000. Scholarships are available based on merit."]
+                },
+                {
+                  "tag": "timetable",
+                  "patterns": ["Show me the timetable", "Class timings", "What is today's schedule?", "Lecture timings"],
+                  "responses": ["The class timetable is available on the student portal. Please log in to view your batch schedule."]
+                },
+                {
+                  "tag": "exam",
+                  "patterns": ["When are the exams?", "Exam schedule", "Tell me about exams", "Exam timetable"],
+                  "responses": ["Mid-semester exams are held in September and final exams in December. The detailed schedule is uploaded on the notice board and student portal."]
+                },
+                {
+                  "tag": "hostel",
+                  "patterns": ["Is hostel available?", "Tell me about hostel", "Hostel fees", "Accommodation"],
+                  "responses": ["Yes, hostel facilities are available for both boys and girls. The hostel fee is ₹30,000 per semester including food."]
+                },
+                {
+                  "tag": "library",
+                  "patterns": ["Library timings", "When is the library open?", "Library information"],
+                  "responses": ["The library is open from 9 AM to 7 PM, Monday to Saturday."]
+                },
+                {
+                  "tag": "goodbye",
+                  "patterns": ["Bye", "Goodbye", "See you later"],
+                  "responses": ["Goodbye! Have a nice day 😊", "See you soon!"]
+                }
+              ]
+            };
+            
+
+            // Function to add a message to the chat display
+            function appendMessage(sender, text) {
+                const messageContainer = document.createElement('div');
+                messageContainer.className = `flex space-x-3 ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
+
+                if (sender === 'user') {
+                    messageContainer.innerHTML = `
+                        <div class="max-w-xs md:max-w-md p-4 bg-blue-500 text-white rounded-2xl rounded-tr-none shadow-md">
+                            ${text}
+                        </div>
+                    `;
+                } else {
+                    messageContainer.innerHTML = `
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-200 text-gray-700 font-bold">
+                            B
+                        </div>
+                        <div class="max-w-xs md:max-w-md p-4 bg-gray-200 rounded-2xl rounded-tl-none text-gray-800 shadow-md">
+                            ${text}
+                        </div>
+                    `;
+                }
+
+                chatBox.appendChild(messageContainer);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+
+            // A simplified "bag of words" and pattern matching function
+            function findBestMatch(message) {
+                const normalizedMessage = message.toLowerCase().replace(/[?!.,]/g, '').split(/\s+/);
+
+                let bestMatch = null;
+                let maxMatches = 0;
+
+                for (const intent of intentsData.intents) {
+                    for (const pattern of intent.patterns) {
+                        const normalizedPattern = pattern.toLowerCase().replace(/[?!.,]/g, '').split(/\s+/);
+                        let matches = 0;
+                        for (const word of normalizedMessage) {
+                            if (normalizedPattern.includes(word)) {
+                                matches++;
+                            }
+                        }
+
+                        if (matches > maxMatches) {
+                            maxMatches = matches;
+                            bestMatch = intent;
+                        }
+                    }
+                }
+
+                // If a match is found, return a random response from that intent
+                if (bestMatch && maxMatches > 0) {
+                    return bestMatch.responses[Math.floor(Math.random() * bestMatch.responses.length)];
+                }
+
+                // Fallback response if no good match is found
+                return "Sorry, I didn't understand that. Could you please rephrase?";
+            }
+            
+            // Function to handle sending a message
+            function sendMessage() {
+                const message = userInput.value.trim();
+                if (message === '') return;
+
+                appendMessage('user', message);
+                userInput.value = '';
+
+                // Simulate a slight delay for the bot's response
+                setTimeout(() => {
+                    const botResponse = findBestMatch(message);
+                    appendMessage('bot', botResponse);
+                }, 500);
+            }
+
+            // Event listeners for sending a message
+            sendBtn.addEventListener('click', sendMessage);
+            userInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+
+            // Function to clear the chat
+            window.clearChat = function() {
+                chatBox.innerHTML = `
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-200 text-gray-700 font-bold">
+                            B
+                        </div>
+                        <div class="max-w-xs md:max-w-md p-4 bg-gray-200 rounded-2xl rounded-tl-none text-gray-800 shadow-md">
+                            Hello! I'm a college helpdesk chatbot. How can I help you today?
+                        </div>
+                    </div>`;
+            };
+
+            // No need to fetch, data is embedded
+        });
+    </script>
+</body>
+
+</html>
