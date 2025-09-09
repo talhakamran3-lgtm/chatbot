@@ -5,65 +5,928 @@
       "patterns": [
         "Hi",
         "Hello",
-        "Is anyone there?",
-        "Good day",
         "Hey",
-        "How are you?"
+        "Good morning",
+        "Good evening"
       ],
       "responses": [
-        "Hello! How can I assist you today?",
-        "Hi there! What can I do for you?",
-        "Greetings! How may I help you?"
+        "Hello! How can I help you today?",
+        "Hi there! What can I do for you?"
+      ]
+    },
+    {
+      "tag": "admission",
+      "patterns": [
+        "Tell me about admission",
+        "How can I apply?",
+        "Admission process",
+        "When does admission start?"
+      ],
+      "responses": [
+        "The admission process starts in July and ends in August. You can apply online through the college portal."
+      ]
+    },
+    {
+      "tag": "fees",
+      "patterns": [
+        "What is the fee?",
+        "Tell me about fees",
+        "Fee details please",
+        "How much is the semester fee?",
+        "How do I pay fees?"
+      ],
+      "responses": [
+        "The semester fee is Rs.60,000. Scholarships are available based on merit. You can pay online via the portal."
+      ]
+    },
+    {
+      "tag": "timetable",
+      "patterns": [
+        "Show me the timetable",
+        "Class timings",
+        "What is today's schedule?",
+        "Lecture timings"
+      ],
+      "responses": [
+        "The class timetable is available on the student portal. Please log in to view your batch schedule."
+      ]
+    },
+    {
+      "tag": "exam",
+      "patterns": [
+        "When are the exams?",
+        "Exam schedule",
+        "Tell me about exams",
+        "Exam timetable"
+      ],
+      "responses": [
+        "Mid-semester exams are held in September and final exams in December. The detailed schedule is uploaded on the notice board and student portal."
+      ]
+    },
+    {
+      "tag": "hostel",
+      "patterns": [
+        "Is hostel available?",
+        "Tell me about hostel",
+        "Hostel fees",
+        "Accommodation"
+      ],
+      "responses": [
+        "Yes, hostel facilities are available for both boys and girls. The hostel fee is ₹30,000 per semester including food."
+      ]
+    },
+    {
+      "tag": "library",
+      "patterns": [
+        "Library timings",
+        "When is the library open?",
+        "Library information"
+      ],
+      "responses": [
+        "The library is open from 9 AM to 7 PM, Monday to Saturday."
+      ]
+    },
+    {
+      "tag": "books",
+      "patterns": [
+        "how many books",
+        "books needed",
+        "library books",
+        "books in library"
+      ],
+      "responses": [
+        "You need 7 books for this semester. All are available in the library!"
       ]
     },
     {
       "tag": "goodbye",
       "patterns": [
         "Bye",
-        "See you later",
         "Goodbye",
-        "I am leaving",
-        "Take care"
+        "See you later"
       ],
       "responses": [
-        "Goodbye! Have a great day!",
-        "See you later! Take care!",
-        "Bye! Hope to see you again!"
+        "Goodbye! Have a nice day 😊",
+        "See you soon!"
       ]
     },
     {
-      "tag": "thanks",
+      "tag": "scholarship",
       "patterns": [
-        "Thanks",
-        "Thank you",
-        "That's helpful",
-        "Thanks for your help"
+        "Scholarship details",
+        "Can I get a scholarship?",
+        "Scholarship process"
       ],
       "responses": [
-        "You're welcome!",
-        "Glad I could help!",
-        "Anytime! Let me know if you need anything else."
+        "Scholarships are awarded based on merit and need. Forms are available on the portal in August."
       ]
     },
     {
-      "tag": "noanswer",
+      "tag": "placements",
+      "patterns": [
+        "Placement details",
+        "Campus placement",
+        "Which companies visit?",
+        "Placement cell info"
+      ],
+      "responses": [
+        "Top companies like TCS, Infosys, Wipro, and Amazon visit our campus. The placement cell guides students with training."
+      ]
+    },
+    {
+      "tag": "transport",
+      "patterns": [
+        "Bus service",
+        "College transport",
+        "Transport fees",
+        "Routes"
+      ],
+      "responses": [
+        "Yes, the college provides bus facilities across the city. Transport fee is Rs.10,000 per semester."
+      ]
+    },
+    {
+      "tag": "canteen",
+      "patterns": [
+        "Canteen food",
+        "Is there a canteen?",
+        "What food is available?",
+        "Cafeteria"
+      ],
+      "responses": [
+        "Yes, the canteen offers hygienic meals, snacks, and beverages at student-friendly prices."
+      ]
+    },
+    {
+      "tag": "wifi",
+      "patterns": [
+        "Is WiFi available?",
+        "Internet access",
+        "Campus WiFi"
+      ],
+      "responses": [
+        "Yes, high-speed WiFi is available throughout the campus for registered students."
+      ]
+    },
+    {
+      "tag": "faculty",
+      "patterns": [
+        "Teachers list",
+        "Faculty info",
+        "Who are the professors?",
+        "Faculty contacts"
+      ],
+      "responses": [
+        "Faculty details with qualifications and contact emails are listed on the college website under the 'Academics' section."
+      ]
+    },
+    {
+      "tag": "results",
+      "patterns": [
+        "When will results come?",
+        "Results date",
+        "Where can I check my results?"
+      ],
+      "responses": [
+        "Results are announced 3 weeks after exams. You can check them on the student portal."
+      ]
+    },
+    {
+      "tag": "events",
+      "patterns": [
+        "College events",
+        "Cultural fest",
+        "Tech fest",
+        "Upcoming events"
+      ],
+      "responses": [
+        "Our annual cultural fest is in February and the tech fest is in October. Updates are posted on the notice board and website."
+      ]
+    },
+    {
+      "tag": "attendance",
+      "patterns": [
+        "Attendance percentage",
+        "Minimum attendance",
+        "Attendance rules"
+      ],
+      "responses": [
+        "Students must maintain at least 75% attendance to be eligible for exams."
+      ]
+    },
+    {
+      "tag": "sports",
+      "patterns": [
+        "Sports facilities",
+        "Playground",
+        "Sports events"
+      ],
+      "responses": [
+        "The college has cricket, football, basketball, and indoor sports facilities. Annual sports meet happens in January."
+      ]
+    },
+    {
+      "tag": "medical",
+      "patterns": [
+        "Medical help",
+        "Health center",
+        "First aid",
+        "Doctor in college"
+      ],
+      "responses": [
+        "The college has a medical room with a doctor and nurse available during class hours."
+      ]
+    },
+    {
+      "tag": "idcard",
+      "patterns": [
+        "ID card issue",
+        "Lost ID card",
+        "New ID card"
+      ],
+      "responses": [
+        "For a new or duplicate ID card, contact the admin office with an application and proof of identity."
+      ]
+    },
+    {
+      "tag": "complaint",
+      "patterns": [
+        "How to file a complaint?",
+        "Student grievance",
+        "Complaint process"
+      ],
+      "responses": [
+        "You can file complaints through the online grievance portal or by visiting the student affairs office."
+      ]
+    },
+    {
+      "tag": "certificate",
+      "patterns": [
+        "How to get a bonafide certificate?",
+        "Certificate request",
+        "Character certificate"
+      ],
+      "responses": [
+        "Certificates can be applied for at the admin office. Processing time is 3-5 working days."
+      ]
+    },
+    {
+      "tag": "holiday",
+      "patterns": [
+        "Holiday list",
+        "When is the next holiday?",
+        "College closed dates"
+      ],
+      "responses": [
+        "The academic calendar with holidays is available on the college website and notice board."
+      ]
+    },
+    {
+      "tag": "lab",
+      "patterns": [
+        "Computer lab",
+        "Lab timings",
+        "Lab facilities"
+      ],
+      "responses": [
+        "Labs are open from 9 AM to 6 PM. Students must carry their ID card for entry."
+      ]
+    },
+    {
+      "tag": "internship",
+      "patterns": [
+        "Internship help",
+        "Internship opportunities",
+        "How to apply for internship?"
+      ],
+      "responses": [
+        "The training & placement cell shares internship opportunities via email and notice board regularly."
+      ]
+    },
+    {
+      "tag": "clubs",
+      "patterns": [
+        "Student clubs",
+        "Cultural clubs",
+        "Technical clubs"
+      ],
+      "responses": [
+        "We have various clubs including dance, music, coding, robotics, and debate. You can register during the induction program."
+      ]
+    },
+    {
+      "tag": "hostel_rules",
+      "patterns": [
+        "Hostel rules",
+        "What are hostel timings?",
+        "Hostel curfew"
+      ],
+      "responses": [
+        "Hostel entry is allowed till 9 PM. Visitors are restricted. Ragging and smoking are strictly prohibited."
+      ]
+    },
+    {
+      "tag": "lost_found",
+      "patterns": [
+        "Lost something",
+        "Lost and found",
+        "Where to report lost items?"
+      ],
+      "responses": [
+        "Lost items can be reported at the security office. A lost and found register is maintained there."
+      ]
+    },
+    {
+      "tag": "faq",
+      "patterns": [
+        "FAQ",
+        "Help",
+        "Common questions"
+      ],
+      "responses": [
+        "You can visit the FAQ section on the website for commonly asked questions."
+      ]
+    },
+    {
+      "tag": "fallback",
       "patterns": [],
       "responses": [
-        "I'm sorry, I don't understand.",
-        "Can you please rephrase that?",
-        "I'm not sure how to respond to that."
+        "Sorry, I didn’t understand that. Could you please rephrase?"
       ]
     },
     {
-      "tag": "options",
+      "tag": "syllabus",
       "patterns": [
-        "What can you do?",
-        "Help",
-        "What are your capabilities?"
+        "What is the syllabus?",
+        "Share syllabus",
+        "Course syllabus"
       ],
       "responses": [
-        "I can assist you with various queries. Just ask!",
-        "You can ask me about greetings, farewells, or general questions."
+        "The syllabus for each course is available on the student portal under 'Academics' section."
+      ]
+    },
+    {
+      "tag": "curriculum",
+      "patterns": [
+        "Tell me about curriculum",
+        "Curriculum details",
+        "What subjects are in curriculum?"
+      ],
+      "responses": [
+        "The curriculum is designed as per university guidelines and is updated every 4 years. You can check it on the academics section."
+      ]
+    },
+    {
+      "tag": "electives",
+      "patterns": [
+        "What electives are available?",
+        "Elective subjects",
+        "Electives list"
+      ],
+      "responses": [
+        "Electives vary by department. You can view available electives on the student portal during course registration."
+      ]
+    },
+    {
+      "tag": "exam_form",
+      "patterns": [
+        "How to fill exam form?",
+        "Exam form process",
+        "Submit exam form"
+      ],
+      "responses": [
+        "Exam forms can be filled online through the student portal. Please complete before the deadline to avoid penalties."
+      ]
+    },
+    {
+      "tag": "revaluation",
+      "patterns": [
+        "How to apply for revaluation?",
+        "Revaluation process",
+        "Recheck exam paper"
+      ],
+      "responses": [
+        "Revaluation applications can be submitted online within 15 days of result declaration. Fees apply per subject."
+      ]
+    },
+    {
+      "tag": "resume_help",
+      "patterns": [
+        "How to make a resume?",
+        "Resume tips",
+        "Help with CV"
+      ],
+      "responses": [
+        "You can attend resume building workshops conducted by the placement cell."
+      ]
+    },
+    {
+      "tag": "higher_studies",
+      "patterns": [
+        "Higher studies guidance",
+        "PG options",
+        "Study abroad"
+      ],
+      "responses": [
+        "The career counseling cell provides guidance for higher studies and entrance exams."
+      ]
+    },
+    {
+      "tag": "skill_workshops",
+      "patterns": [
+        "Skill workshops",
+        "Workshops available",
+        "Extra courses"
+      ],
+      "responses": [
+        "Workshops on coding, soft skills, and entrepreneurship are conducted regularly. Check the notice board."
+      ]
+    },
+    {
+      "tag": "parking",
+      "patterns": [
+        "Is parking available?",
+        "Parking for students",
+        "Vehicle parking"
+      ],
+      "responses": [
+        "Yes, parking space is available near the main gate for students and staff."
+      ]
+    },
+    {
+      "tag": "dress_code",
+      "patterns": [
+        "Is there dress code?",
+        "Uniform policy",
+        "What to wear?"
+      ],
+      "responses": [
+        "There is no strict dress code, but students are expected to dress decently."
+      ]
+    },
+    {
+      "tag": "cafeteria_menu",
+      "patterns": [
+        "What is in cafeteria?",
+        "Cafeteria menu",
+        "Food in canteen"
+      ],
+      "responses": [
+        "The cafeteria offers a variety of meals and snacks. Menu is updated weekly on the portal."
+      ]
+    },
+    {
+      "tag": "hangout_spots",
+      "patterns": [
+        "Best hangout spots?",
+        "Where do students chill?",
+        "Fun places in campus"
+      ],
+      "responses": [
+        "Students usually hang out near the cafeteria, sports ground, and library lawns."
+      ]
+    },
+    {
+      "tag": "mental_health",
+      "patterns": [
+        "Mental health support",
+        "Counseling available?",
+        "Stress help"
+      ],
+      "responses": [
+        "Yes, the college provides free counseling sessions with certified professionals."
+      ]
+    },
+    {
+      "tag": "financial_aid",
+      "patterns": [
+        "Financial help",
+        "Fee concession",
+        "Aid for students"
+      ],
+      "responses": [
+        "Financial aid is available for economically weaker students. Apply through the admin office."
+      ]
+    },
+    {
+      "tag": "tech_support",
+      "patterns": [
+        "Portal login issue",
+        "Can't login",
+        "Technical support"
+      ],
+      "responses": [
+        "For login issues, reset your password or contact IT support at support@college.edu."
+      ]
+    },
+    {
+      "tag": "password_reset",
+      "patterns": [
+        "Forgot password",
+        "Reset password",
+        "Change my password"
+      ],
+      "responses": [
+        "You can reset your password via the student portal 'Forgot Password' option."
+      ]
+    },
+    {
+      "tag": "printing",
+      "patterns": [
+        "Where to print?",
+        "Printing facility",
+        "Print documents"
+      ],
+      "responses": [
+        "Printing and photocopying services are available in the library."
+      ]
+    },
+    {
+      "tag": "college_location",
+      "patterns": [
+        "Where is the college?",
+        "College location",
+        "Address"
+      ],
+      "responses": [
+        "The college is located at XYZ Road, ABC City. Full address is available on the website."
+      ]
+    },
+    {
+      "tag": "working_hours",
+      "patterns": [
+        "College timings",
+        "Working hours",
+        "What time does college open?"
+      ],
+      "responses": [
+        "College runs from 9 AM to 5 PM, Monday to Saturday."
+      ]
+    },
+    {
+      "tag": "emergency_contacts",
+      "patterns": [
+        "Emergency contacts",
+        "Whom to call in emergency?",
+        "Help contacts"
+      ],
+      "responses": [
+        "In emergencies, contact the warden, security, or call 100 for police. Emergency numbers are displayed on notice boards."
+      ]
+    },
+    {
+      "tag": "alumni_network",
+      "patterns": [
+        "Alumni network",
+        "Alumni association",
+        "Meet alumni"
+      ],
+      "responses": [
+        "Yes, we have an active alumni network. Annual alumni meet is conducted every December."
+      ]
+    },
+    {
+      "tag": "sports_facilities",
+      "patterns": [
+        "Sports available",
+        "Sports ground",
+        "Play area"
+      ],
+      "responses": [
+        "The campus has grounds for cricket, football, basketball, and indoor games."
+      ]
+    },
+    {
+      "tag": "medical_facility",
+      "patterns": [
+        "Medical help",
+        "First aid",
+        "Campus doctor"
+      ],
+      "responses": [
+        "Yes, a medical center with a doctor is available inside the campus."
+      ]
+    },
+    {
+      "tag": "internship_help",
+      "patterns": [
+        "Internship help",
+        "How to find internship?",
+        "Internship guidance"
+      ],
+      "responses": [
+        "The placement cell assists students in finding internships every semester."
+      ]
+    },
+    {
+      "tag": "transport_facility",
+      "patterns": [
+        "Bus service",
+        "College transport",
+        "How to reach college?"
+      ],
+      "responses": [
+        "College buses run from major parts of the city. Routes are shared at the start of semester."
+      ]
+    },
+    {
+      "tag": "extra_intent_1",
+      "patterns": [
+        "Sample question 1",
+        "Test pattern 1"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 1."
+      ]
+    },
+    {
+      "tag": "extra_intent_2",
+      "patterns": [
+        "Sample question 2",
+        "Test pattern 2"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 2."
+      ]
+    },
+    {
+      "tag": "extra_intent_3",
+      "patterns": [
+        "Sample question 3",
+        "Test pattern 3"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 3."
+      ]
+    },
+    {
+      "tag": "extra_intent_4",
+      "patterns": [
+        "Sample question 4",
+        "Test pattern 4"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 4."
+      ]
+    },
+    {
+      "tag": "extra_intent_5",
+      "patterns": [
+        "Sample question 5",
+        "Test pattern 5"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 5."
+      ]
+    },
+    {
+      "tag": "extra_intent_6",
+      "patterns": [
+        "Sample question 6",
+        "Test pattern 6"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 6."
+      ]
+    },
+    {
+      "tag": "extra_intent_7",
+      "patterns": [
+        "Sample question 7",
+        "Test pattern 7"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 7."
+      ]
+    },
+    {
+      "tag": "extra_intent_8",
+      "patterns": [
+        "Sample question 8",
+        "Test pattern 8"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 8."
+      ]
+    },
+    {
+      "tag": "extra_intent_9",
+      "patterns": [
+        "Sample question 9",
+        "Test pattern 9"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 9."
+      ]
+    },
+    {
+      "tag": "extra_intent_10",
+      "patterns": [
+        "Sample question 10",
+        "Test pattern 10"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 10."
+      ]
+    },
+    {
+      "tag": "extra_intent_11",
+      "patterns": [
+        "Sample question 11",
+        "Test pattern 11"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 11."
+      ]
+    },
+    {
+      "tag": "extra_intent_12",
+      "patterns": [
+        "Sample question 12",
+        "Test pattern 12"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 12."
+      ]
+    },
+    {
+      "tag": "extra_intent_13",
+      "patterns": [
+        "Sample question 13",
+        "Test pattern 13"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 13."
+      ]
+    },
+    {
+      "tag": "extra_intent_14",
+      "patterns": [
+        "Sample question 14",
+        "Test pattern 14"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 14."
+      ]
+    },
+    {
+      "tag": "extra_intent_15",
+      "patterns": [
+        "Sample question 15",
+        "Test pattern 15"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 15."
+      ]
+    },
+    {
+      "tag": "extra_intent_16",
+      "patterns": [
+        "Sample question 16",
+        "Test pattern 16"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 16."
+      ]
+    },
+    {
+      "tag": "extra_intent_17",
+      "patterns": [
+        "Sample question 17",
+        "Test pattern 17"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 17."
+      ]
+    },
+    {
+      "tag": "extra_intent_18",
+      "patterns": [
+        "Sample question 18",
+        "Test pattern 18"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 18."
+      ]
+    },
+    {
+      "tag": "extra_intent_19",
+      "patterns": [
+        "Sample question 19",
+        "Test pattern 19"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 19."
+      ]
+    },
+    {
+      "tag": "extra_intent_20",
+      "patterns": [
+        "Sample question 20",
+        "Test pattern 20"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 20."
+      ]
+    },
+    {
+      "tag": "extra_intent_21",
+      "patterns": [
+        "Sample question 21",
+        "Test pattern 21"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 21."
+      ]
+    },
+    {
+      "tag": "extra_intent_22",
+      "patterns": [
+        "Sample question 22",
+        "Test pattern 22"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 22."
+      ]
+    },
+    {
+      "tag": "extra_intent_23",
+      "patterns": [
+        "Sample question 23",
+        "Test pattern 23"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 23."
+      ]
+    },
+    {
+      "tag": "extra_intent_24",
+      "patterns": [
+        "Sample question 24",
+        "Test pattern 24"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 24."
+      ]
+    },
+    {
+      "tag": "extra_intent_25",
+      "patterns": [
+        "Sample question 25",
+        "Test pattern 25"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 25."
+      ]
+    },
+    {
+      "tag": "extra_intent_26",
+      "patterns": [
+        "Sample question 26",
+        "Test pattern 26"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 26."
+      ]
+    },
+    {
+      "tag": "extra_intent_27",
+      "patterns": [
+        "Sample question 27",
+        "Test pattern 27"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 27."
+      ]
+    },
+    {
+      "tag": "extra_intent_28",
+      "patterns": [
+        "Sample question 28",
+        "Test pattern 28"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 28."
+      ]
+    },
+    {
+      "tag": "extra_intent_29",
+      "patterns": [
+        "Sample question 29",
+        "Test pattern 29"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 29."
+      ]
+    },
+    {
+      "tag": "extra_intent_30",
+      "patterns": [
+        "Sample question 30",
+        "Test pattern 30"
+      ],
+      "responses": [
+        "This is a sample response for extra intent 30."
       ]
     }
   ]
